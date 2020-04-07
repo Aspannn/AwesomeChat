@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/padding_horz"
+    android:layout_marginTop="@dimen/message_gap"
+    android:layout_marginEnd="@dimen/padding_horz"
+    android:layout_marginBottom="@dimen/message_gap"
+    android:background="@drawable/bg_message_field"
+    android:orientation="vertical"
+    tools:showIn="@layout/fragment_chat">
+
+    <TextView
+        android:id="@+id/senderField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/contentField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorMessage"
+        tools:text="@tools:sample/cities" />
+
+    <TextView
+        android:id="@+id/dateField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        tools:text="@tools:sample/date/hhmm" />
+
+</LinearLayout>

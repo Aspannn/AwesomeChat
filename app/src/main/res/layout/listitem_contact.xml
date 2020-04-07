@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/avatar_size_bigger"
+        android:layout_height="@dimen/avatar_size_bigger"
+        android:layout_margin="@dimen/padding_horz"
+        android:src="@drawable/ic_account_circle"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guideline_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guideline_margin_second" />
+
+    <TextView
+        android:id="@+id/captionField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_horz"
+        android:textColor="@color/colorMessage"
+        android:textSize="@dimen/message_text_size_secondary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineCaption"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/descriptionField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textSize="@dimen/message_text_size_ternary"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineDescription"
+        app:layout_constraintStart_toStartOf="@+id/captionField"
+        tools:text="@tools:sample/cities" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

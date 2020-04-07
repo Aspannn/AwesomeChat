@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_horz">12dp</dimen>
+    <dimen name="padding_vert">4dp</dimen>
+
+    <dimen name="message_radius">8dp</dimen>
+    <dimen name="message_gap">2dp</dimen>
+    <dimen name="widget_min_height">48dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin_big">48dp</dimen>
+
+    <dimen name="avatar_size_bigger">48dp</dimen>
+    <dimen name="guideline_margin">36dp</dimen>
+    <dimen name="guideline_margin_second">52dp</dimen>
+
+    <dimen name="message_text_size_secondary">12sp</dimen>
+    <dimen name="message_text_size_ternary">10sp</dimen>
+</resources>

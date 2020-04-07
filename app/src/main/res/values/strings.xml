@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Awesome Chat</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="message">Message</string>
+    <string name="phone_number">Phone number</string>
+    <string name="sendMessageButton">send</string>
+    <string name="code_verification">Verification code</string>
+
+
+    <string name="nextButton">Next</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="message_no_contacts">You have no chats yet.\nClick on the button to start a chat.</string>
+    <string name="name">name</string>
+
+    <string name="add_contact">Add Contact</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_add">Add</string>
+
+</resources>
