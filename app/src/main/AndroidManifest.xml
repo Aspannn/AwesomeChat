@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kz.aspan.awesomechat">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,10 +20,23 @@
         </activity>
         <activity
             android:name=".auth.AuthActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize" />
 
-        </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".broadcasts.MessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="kz.aspan.awesomechat.mark_as_read" />
+                <action android:name="kz.aspan.awesomechat.reply" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

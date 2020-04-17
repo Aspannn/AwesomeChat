@@ -18,5 +18,12 @@
     <string name="add_contact">Add Contact</string>
     <string name="action_cancel">Cancel</string>
     <string name="action_add">Add</string>
+    <string name="action_mark_read">Mark as Read</string>
+
+    <string name="reply_label">Replay</string>
+    <string name="action_reply">Reply</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>

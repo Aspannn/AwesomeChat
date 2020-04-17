@@ -14,17 +14,20 @@
         android:layout_marginTop="@dimen/padding_horz"
         android:layout_marginEnd="@dimen/padding_horz"
         android:hint="@string/phone_number"
-        app:layout_constraintTop_toTopOf="parent"
-        app:prefixText="+7">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:imeOptions=""
-            android:inputType="number"
-            android:maxLength="@integer/phone_max_length" />
+            android:digits="0123456798 _-()+"
+
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"

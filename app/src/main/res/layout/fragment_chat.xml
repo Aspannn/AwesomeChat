@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".ChatFragment">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"

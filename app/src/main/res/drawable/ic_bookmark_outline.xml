@@ -1,0 +1,4 @@
+<vector android:height="24dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#000" android:name="bookmark-outline" android:pathData="m53 63.79 -21 -14.37 -21 14.37v-63.79h42v63.79zm-21 -19.22 17 11.63v-52.21h-34v52.21l17 -11.63z"/>
+</vector>

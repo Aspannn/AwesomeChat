@@ -65,16 +65,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MessageViewHol
 
         public void bind(Message message) {
 
-
-            senderField.setText(message.getSender());
             contentField.setText(message.getContent());
-
 
             String time = formatter.format(new Date(message.getTimesTamp()));
             dateField.setText(time);
-
-            System.out.println(message.getContent() + " " + message.getExternal());
-
 
             int marginBig = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.margin_big);
             int marginSmall = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.padding_horz);
@@ -82,6 +76,8 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MessageViewHol
             RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) itemView.getLayoutParams();
 
             if (message.getExternal()) {
+                senderField.setVisibility(View.VISIBLE);
+                senderField.setText(message.getSenderName());
                 params.setMarginStart(marginSmall);
                 params.setMarginEnd(marginBig);
 

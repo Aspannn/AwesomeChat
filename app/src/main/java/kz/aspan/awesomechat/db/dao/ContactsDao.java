@@ -16,4 +16,7 @@ public interface ContactsDao {
 
     @Insert
     long insert(Contact contact);
+
+    @Query("SELECT * FROM contacts WHERE phone == :phone LIMIT 1")
+    Contact getByPhone(String phone);
 }

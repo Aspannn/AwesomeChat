@@ -17,4 +17,7 @@ public interface MessagesDao {
     @Query("SELECT * FROM messages WHERE (sender = :sender AND recipient = :recipient) OR" +
             "(sender = :recipient AND recipient = :sender)")
     List<Message> getAll(String sender, String recipient);
+
+    @Query("SELECT * FROM messages WHERE id = :id")
+    Message getById(long id);
 }

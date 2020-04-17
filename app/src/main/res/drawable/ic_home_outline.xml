@@ -1,0 +1,4 @@
+<vector android:height="24dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#000" android:name="home-outline" android:pathData="m53 59h-17v-14h-8v14h-17v-23h-10.83l31.83 -31.83l31.83 31.83h-10.83v23zm-13 -4h9v-23h5.17l-22.17 -22.17l-22.17 22.17h5.17v23h9v-14h16v14z"/>
+</vector>

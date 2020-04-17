@@ -4,14 +4,16 @@ import androidx.fragment.app.Fragment;
 
 public abstract class BaseFragment extends Fragment {
 
+
     public ChatManager getChatManager() {
         return (ChatManager) getActivity();
     }
 
     public void changeFragment(Fragment fragment) {
-        getFragmentManager().beginTransaction()
-                .replace(R.id.container, fragment)
-                .addToBackStack(null)
-                .commit();
+        ((MainActivity) requireActivity()).replaceFragment(fragment, true);
+    }
+
+    public void setTitle(String title) {
+        requireActivity().setTitle(title);
     }
 }

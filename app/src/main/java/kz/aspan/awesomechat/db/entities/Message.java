@@ -1,21 +1,30 @@
 package kz.aspan.awesomechat.db.entities;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "messages", indices = {@Index(value = "recipient")})
 public class Message {
 
+    public static final int STATUS_NEW = 0;
+    public static final int STATUS_SENT = 1;
+    public static final int STATUS_DELIVERED = 2;
+    public static final int STATUS_READ = 3;
+
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private long id;
 
     private String sender;
     private String recipient;
     private String content;
     private long timesTamp;
-
+    private int status = STATUS_NEW;
     private Boolean external = false;
+
+//    @Ignore
+    private String senderName;
 
     public Message() {
     }
@@ -26,11 +35,27 @@ public class Message {
         this.content = content;
     }
 
-    public int getId() {
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getSenderName() {
+        return senderName;
+    }
+
+    public void setSenderName(String senderName) {
+        this.senderName = senderName;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

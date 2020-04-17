@@ -30,10 +30,12 @@ public class ChatFragment extends BaseFragment implements View.OnClickListener, 
 
     private String sender;
     private String recipient;
+    private String recipientName;
 
 
-    public ChatFragment(String recipient) {
+    public ChatFragment(String recipient, String recipientName) {
         this.recipient = recipient;
+        this.recipientName = recipientName;
     }
 
     @Override
@@ -64,6 +66,8 @@ public class ChatFragment extends BaseFragment implements View.OnClickListener, 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        setTitle(recipientName);
+
         sendButton.setOnClickListener(this);
         adapter = new ChatAdapter();
         //test

@@ -13,6 +13,7 @@
     tools:showIn="@layout/fragment_chat">
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/senderField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
