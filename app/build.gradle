@@ -31,7 +31,7 @@ dependencies {
     //Android UI
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.2.0-alpha05'
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
 
     //External UI libraries
     implementation 'de.hdodenhof:circleimageview:3.1.0'

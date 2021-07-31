@@ -1,0 +1,6 @@
+
+f
+java:S1301X"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ
+Q	java:S125K"<This block of commented-out lines of code should be removed.(ì¦âÖ
+Q	java:S1256"<This block of commented-out lines of code should be removed.(½üË
+<	java:S131X""Add a default case to this switch.(×“¾ñùÿÿÿÿ

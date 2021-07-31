@@ -17,6 +17,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import kz.aspan.awesomechat.R;
 
 public class AddContactDialogFragment extends DialogFragment implements View.OnClickListener {
+
     private ContactAddListener listener;
 
     private TextInputLayout nameField;
@@ -49,6 +50,7 @@ public class AddContactDialogFragment extends DialogFragment implements View.OnC
 
             }
         });
+
         return dialog;
     }
 
@@ -59,7 +61,6 @@ public class AddContactDialogFragment extends DialogFragment implements View.OnC
 
         //todo
         if (listener != null) {
-
             listener.onContactAdded(name, phone);
         }
         dismiss();

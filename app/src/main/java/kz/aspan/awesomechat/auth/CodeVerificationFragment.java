@@ -76,7 +76,6 @@ public class CodeVerificationFragment extends Fragment implements View.OnClickLi
         switch (v.getId()) {
             case R.id.signUpButton:
                 String code = codeField.getEditText().getText().toString();
-//                check(code);
                 if (listener != null) {
                     listener.onCodeEntered(code);
                 }

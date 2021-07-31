@@ -69,6 +69,7 @@ public class ContactsFramgent extends BaseFragment implements LoaderManager.Load
 
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
+
     }
 
     @NonNull

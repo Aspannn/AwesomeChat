@@ -1,0 +1,14 @@
+
+Q	java:S110)"<This class has 9 parents which is greater than 5 authorized.(™½ ï
+`
+java:S1192‡"IDefine a constant instead of duplicating this literal "Firebase" 5 times.(Ìˆ—û
+K
+java:S1874¢"/Remove this use of "Builder"; it is deprecated.(ôÊ»‚ıÿÿÿÿ
+V	java:S125D"<This block of commented-out lines of code should be removed.(Ù½“Óùÿÿÿÿ
+L
+java:S2696N"6Make the enclosing method "static" or remove this set.(èşŸÏ
+t
+java:S1450-"YRemove the "firebaseDb" field and declare it as a local variable in the relevant methods.(·»ìøÿÿÿÿ
+f
+java:S1301l"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
+<	java:S131l""Add a default case to this switch.(øå´¡ÿÿÿÿÿ

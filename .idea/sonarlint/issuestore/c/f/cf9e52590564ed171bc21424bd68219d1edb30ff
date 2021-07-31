@@ -1,0 +1,18 @@
+
+=	java:S131¡""Add a default case to this switch.(øå´¡ÿÿÿÿÿ
+i	java:S116'"TRename this field "KEY_PHONE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é¼Ï°
+<
+java:S1170%"!Make this final field static too.(Îšû¾üÿÿÿÿ
+<
+java:S1170&"!Make this final field static too.(Ðÿ„”üÿÿÿÿ
+7
+java:S1170'"!Make this final field static too.(é¼Ï°
+S
+java:S1117‡"<Rename "contacts" which hides the field declared at line 46.(Â†…Å
+T
+java:S1155w">Use isEmpty() to check whether the collection is empty or not.(³ø°†
+W	java:S125¯"<This block of commented-out lines of code should be removed.(ú»Ü›ûÿÿÿÿ
+g
+java:S1301¡"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
+k	java:S116%"QRename this field "KEY_ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îšû¾üÿÿÿÿ
+p	java:S116&"VRename this field "KEY_CAPTION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ðÿ„”üÿÿÿÿ

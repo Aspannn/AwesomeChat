@@ -21,6 +21,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
+import kz.aspan.awesomechat.db.entities.Contact;
+import kz.aspan.awesomechat.db.entities.ContactsConverter;
+
 public class MainFragment extends BaseFragment {
 
     public static final int PERMISSION_READ_CONTACT = 0;
@@ -71,6 +78,7 @@ public class MainFragment extends BaseFragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                test();
                 int currentTab = tabLayout.getSelectedTabPosition();
                 if (currentTab == 0) {
                     int permission = ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_CONTACTS);
@@ -114,5 +122,10 @@ public class MainFragment extends BaseFragment {
                 }
                 break;
         }
+    }
+
+
+    private void test() {
+
     }
 }

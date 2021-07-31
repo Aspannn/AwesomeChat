@@ -20,7 +20,7 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(@NonNull String caption, @NonNull String phone) {
+    public Contact(String caption, String phone) {
         this.caption = caption;
         this.phone = phone;
     }
@@ -33,7 +33,6 @@ public class Contact {
         this.id = id;
     }
 
-    @NonNull
     public String getCaption() {
         return caption;
     }
@@ -42,12 +41,16 @@ public class Contact {
         this.caption = caption;
     }
 
-    @NonNull
     public String getPhone() {
         return phone;
     }
 
     public void setPhone(@NonNull String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return caption + ',' + phone;
     }
 }

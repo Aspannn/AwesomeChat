@@ -39,11 +39,11 @@ public class ProfileFragment extends Fragment {
         }
 
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter(getContext(),
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),
                 android.R.layout.simple_list_item_1, data);
 
         ListView listView = getView().findViewById(R.id.listView);
-        listView.setAdapter(arrayAdapter);
-
+        listView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
 }

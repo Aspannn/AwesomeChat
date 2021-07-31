@@ -20,10 +20,12 @@ public class Message {
     private String recipient;
     private String content;
     private long timesTamp;
-    private int status = STATUS_NEW;
-    private Boolean external = false;
 
-//    @Ignore
+    private Boolean external;
+
+    private int status = STATUS_NEW;
+
+    @Ignore
     private String senderName;
 
     public Message() {

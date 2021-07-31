@@ -18,8 +18,6 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        System.out.println(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber() + "");
-
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         if (user != null) {

@@ -57,6 +57,7 @@ public class ChatFragment extends BaseFragment implements View.OnClickListener, 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
+
         messagesField = view.findViewById(R.id.messageFiled);
         sendButton = view.findViewById(R.id.sendButton);
         messagesView = view.findViewById(R.id.rv);

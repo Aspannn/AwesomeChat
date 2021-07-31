@@ -25,7 +25,8 @@ import java.util.concurrent.TimeUnit;
 import kz.aspan.awesomechat.MainActivity;
 import kz.aspan.awesomechat.R;
 
-public class AuthActivity extends AppCompatActivity implements SignUpFragment.SignUpListener, CodeVerificationFragment.CodeVerificationListener {
+public class AuthActivity extends AppCompatActivity
+        implements SignUpFragment.SignUpListener, CodeVerificationFragment.CodeVerificationListener {
 
     private String verificationId;
     private static String TAG = "AuthActivity";
@@ -71,19 +72,17 @@ public class AuthActivity extends AppCompatActivity implements SignUpFragment.Si
                         Log.e(TAG, "onVerificationFailed" + e.getMessage());
 
                         if (e instanceof FirebaseAuthInvalidCredentialsException) {
-                            //todo
+                            //todo invalid request
 
                         } else if (e instanceof FirebaseTooManyRequestsException) {
-                            //todo
+                            //todo sms quota exceeded
                         }
                     }
 
                     @Override
                     public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                         super.onCodeSent(verificationId, forceResendingToken);
-
                         Log.d(TAG, "onCodeSent" + verificationId);
-
                         AuthActivity.this.verificationId = verificationId;
 
 
@@ -91,7 +90,6 @@ public class AuthActivity extends AppCompatActivity implements SignUpFragment.Si
                                 .replace(R.id.container, new CodeVerificationFragment())
                                 .addToBackStack(null)
                                 .commit();
-
                     }
                 }
         );
@@ -100,14 +98,17 @@ public class AuthActivity extends AppCompatActivity implements SignUpFragment.Si
     @Override
     public void onCodeEntered(String code) {
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
+
         FirebaseAuth.getInstance().signInWithCredential(credential)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-//                            Log.d();
+                            Log.d(TAG, "signInWithCredential:success");
+
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             finish();
+
 
                         } else {
                             Log.w(TAG, "signInWithCredential:failure" + task.getException().getMessage());
